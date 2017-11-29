@@ -90,6 +90,10 @@ For example:
 
 ```
 cat ~/machines
+# hkucs-PowerEdge-R430-1
+# hkucs-PowerEdge-R430-2
+# ...
+# hkucs-PowerEdge-R430-18
 mynode1.some.random.domain
 mynode2.some.random.domain
 ...
@@ -105,6 +109,7 @@ Before proceeding, verify that this is setup correctly; check that the following
 
 ```
 # from machine mynode1.some.random.domain
+# ssh hkucs-PowerEdge-R430-2
 ssh mynode2.some.random.domain
 ```
 
@@ -125,6 +130,7 @@ In order for mpirsync to run properly all machines must have all network ports o
 
 This step runs the [PageRank](http://en.wikipedia.org/wiki/PageRank) algorithm on a synthetic generated graph of 100,000 nodes. It spawns two GraphLab mpi instances (-n 2).
 ```
+# ~/graphlab/release/toolkits/graph_analytics/pagerank
 mpiexec -n 2 -hostfile ~/machines /path/to/pagerank --powerlaw=100000
 ```
 

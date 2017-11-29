@@ -1,0 +1,15 @@
+# MD5SUM on Linux
+## Check the iso file
+### Manual method
+First open a terminal and go to the correct directory to check a downloaded iso file:
+```
+    ubuntu@ubuntu-desktop:~$ cd Downloads
+```
+Then run the following command from within the download directory.
+```
+    md5sum ubuntu-11.10-dvd-i386.iso
+```
+**md5sum** should then print out a single line after calculating the hash:
+```
+    8044d756b7f00b695ab8dce07dce43e5 ubuntu-11.10-dvd-i386.iso
+```
